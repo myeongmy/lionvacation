@@ -1,0 +1,7 @@
+<h1>댓글 수정하기<h1>
+<hr>
+<form action='/foods/<%=@food.id%>/fcomments/<%=@edit_fcomment.id%>/update' method ="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <textarea name ="fcomments_content"><%=@edit_fcomment.content%></textarea>
+    <input type="submit" value="등록"><br>
+</form>

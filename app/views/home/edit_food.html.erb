@@ -1,0 +1,7 @@
+<h1>기존 글 수정 페이지입니다</h1>
+<%= form_tag("/home/update_food/#{@food.id}", method: "post") do%>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    제목 : <input type='text' name='food_title' value='<%=@food.title%>'><br><br>
+    내용 : <textarea name='food_content'><%=@food.content%></textarea><br><br>
+    <input type='submit' value='제출'>
+<%end%>

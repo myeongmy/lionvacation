@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>사자의 방학</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  <link rel="stylesheet" href="../stylesheets/food.css">
+   <link rel="stylesheet" href="../stylesheets/location.css">
+   <link rel="stylesheet" href="../stylesheets/thing.css">
+</head>
+
+
+<body>
+<!-- header &navigation -->
+<div class="first_nav">
+    <div class="nav_log">
+            <% if user_signed_in? %>
+            <div class="nav_p">
+                <p><%= current_user.email %>님 반가워요!</p>
+            </div>
+            <div class="nav_a">
+                <a href="/users/sign_out">로그아웃</a>
+            </div>
+            <% else %>
+            <div class="nav_p">
+                <p>로그인을 하고 이용해주세요 : )</p>
+            </div>
+            <div class="nav_a">
+                <a href="/users/sign_in" style="margin-right:1em;">로그인</a>
+                <a href="/users/sign_up">회원가입</a>
+            </div>
+            <% end %>  
+        </div>
+        
+        <!--<div class="about">-->
+        <!--    <a href="#about">ABOUT</a>-->
+        <!--</div>-->
+</div>
+
+<div class="header"> 
+        <div class="header_img">
+        </div>
+        <a href="/"><%=image_tag("logo_home.png", class: "logo_height")%></a>
+        <div class="header_img">
+        </div>
+</div>
+
+<hr class="header_hr">
+
+
+
+
+
+
+<%= yield %>
+
+<footer>
+    <p>Copyright &copy; Likelion_Darkbalnono, 2018</p>
+</footer>
+
+
+
+</body>
+
+
+
+
+</html>

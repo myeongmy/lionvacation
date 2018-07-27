@@ -1,0 +1,26 @@
+
+<h1>제목 : <%=@thing.title%> </h1><br>
+<h1>내용 : <%=@thing.content%></h1> <br>
+<%= image_tag @thing.image.url %><br>
+<%= link_to '[삭 제]', "/home/destroy_thing/#{@thing.id}" %>
+<%= link_to '[수 정]', "/home/edit_thing/#{@thing.id}" %>
+
+<hr>
+
+<form action='/things/<%=@thing.id%>/tcomments/create' method ="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <textarea name ="content"></textarea>
+    <input type="submit" value="등록"><br>
+</form>
+
+<%@thing.tcomments.each do |x|%>
+<%=x.user_email%> | <%=x.content%> 
+<%if x.user_email == current_user.email %>
+<a href="/things/<%=@thing.id%>/tcomments/<%=x.id%>/destroy">[삭 제]</a>
+<a href="/things/<%=@thing.id%>/tcomments/<%=x.id%>/edit">[수 정]</a>
+<%end%>
+<br>
+<%end%>
+<hr>
+<hr>
+<a href="/home/show_do">[목록으로]</a>

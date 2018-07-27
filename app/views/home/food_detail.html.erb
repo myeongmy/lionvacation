@@ -1,0 +1,24 @@
+<h1>제목 : <%=@food.title%> </h1><br>
+<h1>내용 : <%=@food.content%></h1> <br>
+<%= image_tag @food.image.url %><br>
+<% if @food.email == current_user.email %>
+<%= link_to '[삭 제]', "/home/destroy/#{@food.id}" %>
+<%= link_to '[수 정]', "/home/edit/#{@food.id}" %>
+<%end%>
+<hr>
+<form action='/foods/<%=@food.id%>/fcomments/create' method ="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <textarea name ="content"></textarea>
+    <input type="submit" value="등록"><br>
+</form>
+
+<%@food.fcomments.each do |x|%>
+<%=x.user_email%> | <%=x.content%>
+<%if x.user_email == current_user.email %>
+<a href="/foods/<%=@food.id%>/fcomments/<%=x.id%>/destroy">[삭 제]</a>
+<a href="/foods/<%=@food.id%>/fcomments/<%=x.id%>/edit">[수 정]</a>
+<%end%>
+<br>
+<%end%>
+<hr>
+<a href="/home/show_eat">[목록으로]</a>

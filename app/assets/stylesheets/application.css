@@ -1,0 +1,256 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    margin: 0;
+    padding-bottom: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+    background: linear-gradient( to top, #c2e59c, #91cbca, #64b3f4);
+}
+
+.first_nav {
+    margin-bottom: 7vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    /*height: 0;*/
+    /*margin: 0 auto;*/
+    /*width: 20px;*/
+    
+}
+
+.nav_log {
+    height: 0;
+    margin: 0 auto;
+    display: flex;
+}
+
+.nav_p{
+    padding-top: 0.5em;
+    flex-grow: 1; f
+    padding-left: 2em;
+}
+
+.nav_p p{
+   border-left: 3px solid white;
+   padding-left: 7px;
+}
+
+.nav_a{
+    letter-spacing: 2px;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    padding-right: 3.5em;
+}
+
+
+
+.header_img {
+    display: inline-block;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.eat {
+
+    text-align: center;
+    padding: 100px;
+    border: 2px solid white;
+}
+
+.go {
+    text-align: center;
+    padding: 100px;
+    border: 2px solid white;
+}
+
+.do {
+    text-align: center;
+    padding: 100px;
+    border: 2px solid white;
+}
+
+
+
+/*start*/
+
+.container{
+    margin: 5em;
+}
+
+
+.about {
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-bottom: 2em;
+    text-align: center;
+    /*background-color: rgba(255,255,255,0.1);*/
+}
+
+.about h2{
+    font-weight: bold;
+}
+
+.about p{
+    margin-top: 2em;
+    line-height: 200%;
+}
+
+
+/*hr*/
+
+.header_hr {
+    margin-top: 3em;
+    margin-bottom: 0.5em;
+    border-color: #ffffff;
+    border-width: 1.5px;
+    max-width: 1600px;
+    border-style: solid
+}
+
+
+
+
+/* Sign up Page -----------*/
+
+.page_signup{
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+.page_signup h1{
+     font-weight: bold;
+     border: 3px solid white;
+     border-radius: 5px;
+     padding: 7px 25px 9px 25px;
+}
+
+.simple_form.new_user{
+    text-align: center;
+}
+
+.form-inputs{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: left !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email.required {
+    color: #464646;
+}
+
+.form-actions{
+    margin-top: 2vh;
+}
+
+/* Sign up Page END-----------*/
+
+/* Login Page START-----------*/
+
+.page_login{
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page_login h1{
+     font-weight: bold;
+     border: 3px solid white;
+     border-radius: 5px;
+     padding: 7px 25px 9px 25px;
+}
+/* -------------Login Page END*/
+
+ /*---------------글쓰는 페이지*/
+ 
+.new_food{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+    .nav{
+  font-weight: bold;
+display: flex;
+justify-content: center;
+padding-top: 50px;
+    }
+    
+    #album_section {
+       color: #ffffff;
+    line-height: 1.65;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    }
+
+  .album_box {
+    margin: 15px;
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+    .image_box {
+     flex: 1 1 0;
+    padding: 10px;
+  }
+
+.style_image {
+    max-width: 100%;
+    height: auto;
+}
+
+div {
+    display: block;
+}

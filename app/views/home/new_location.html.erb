@@ -1,0 +1,11 @@
+<h1>새로운 글 작성 페이지입니다</h1>
+<%= form_tag("/home/create_location",method: "post", multipart: "true") do%>
+    <%=hidden_field_tag :authenticity_token, form_authenticity_token %>
+    제목 : <input type='text' name='location_title'><br><br>
+    내용 : <textarea name='location_content'></textarea><br><br>
+    사진 <%=file_field_tag 'image', accept: 'image/*'%><br>
+    
+    <%= submit_tag "완료"%>
+<%end%>
+
+<%= link_to 'home으로 가기', "/home/start"%>
